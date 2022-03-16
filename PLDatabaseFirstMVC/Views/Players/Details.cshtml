@@ -1,0 +1,61 @@
+﻿@model PLDatabaseFirstMVC.Models.Player
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Name)</h1>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.LastName)</h4>
+    <hr />
+    <div class = "card bg-light mb-3" style = "width: 300px;">
+         <img src = "@Url.Content(Model.PlayerImage)" width="300" height="300" />
+          
+         
+        <div class = "card-body">
+           
+            <dl class="row">
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.JerseyNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JerseyNumber)
+        </dd>
+       
+        <dd class = "col-sm-10">
+           <img src = "@Url.Content(Model.Club.CrestUrl)" width="60" height="60"  >
+        </dd>
+    </dl>
+</div>
+        </div>
+    </div>
+   
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PlayerId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

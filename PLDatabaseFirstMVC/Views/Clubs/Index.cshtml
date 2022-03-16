@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PLDatabaseFirstMVC.Models.Club>
+
+@{
+    ViewData["Title"] = "Index";
+   
+}
+
+<h1><img alt = "Premier League" src = ./premier.png /> Premier League</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               <a asp-action="Details" asp-route-id="@item.ClubId">
+                   <img src = "@Url.Content(item.CrestUrl)" width="120" height="120"/>
+                </a>
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ClubId">Edit</a> |
+               
+                <a asp-action="Delete" asp-route-id="@item.ClubId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
