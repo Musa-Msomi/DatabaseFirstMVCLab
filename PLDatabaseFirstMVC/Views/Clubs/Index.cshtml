@@ -1,20 +1,20 @@
 ﻿@model IEnumerable<PLDatabaseFirstMVC.Models.Club>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Clubs";
    
 }
 
-<h1><img alt = "Premier League" src = ./premier.png /> Premier League</h1>
+<h1><img alt = "Premier League" src = ./pl.png height="80" weight="80" /><br />Clubs</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class = "table-default">
             <td>
                <a asp-action="Details" asp-route-id="@item.ClubId">
                    <img src = "@Url.Content(item.CrestUrl)" width="120" height="120"/>

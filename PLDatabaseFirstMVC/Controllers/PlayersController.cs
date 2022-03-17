@@ -23,7 +23,9 @@ namespace PLDatabaseFirstMVC.Controllers
         public async Task<IActionResult> Index()
         {
             var pLContext = _context.Players.Include(p => p.Club);
-            return View(await pLContext.ToListAsync());
+            var player = await pLContext.ToListAsync();
+            player = player.OrderBy(player => player.Name).ToList();
+            return View(player);
         }
 
         // GET: Players/Details/5

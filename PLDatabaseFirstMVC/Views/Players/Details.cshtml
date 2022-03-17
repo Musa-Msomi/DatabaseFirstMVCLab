@@ -4,50 +4,50 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>@Html.DisplayFor(model => model.Name)</h1>
-
 <div>
-    <h4>@Html.DisplayFor(model => model.LastName)</h4>
-    <hr />
-    <div class = "card bg-light mb-3" style = "width: 300px;">
+    <hr/>
+  
+    <div class = "card mb-3" style = "width: 300px;">
+        <h4 class="card-header">@Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.LastName) </h4>
          <img src = "@Url.Content(Model.PlayerImage)" width="300" height="300" />
-          
+         
          
         <div class = "card-body">
            
-            <dl class="row">
-        <dt class = "col-sm-10">
+           
+        <dl>
+        <dt class = "card-title">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "card-subtitle">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col-sm-10">
+        <dt class = "card-title">
             @Html.DisplayNameFor(model => model.LastName)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "card-subtitle">
             @Html.DisplayFor(model => model.LastName)
         </dd>
-        <dt class = "col-sm-10">
+        <dt class = "card-title">
             @Html.DisplayNameFor(model => model.Nationality)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "card-subtitle">
             @Html.DisplayFor(model => model.Nationality)
         </dd>
-        <dt class = "col-sm-10">
+        <dt class = "card-title">
             @Html.DisplayNameFor(model => model.Position)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "card-subtitle">
             @Html.DisplayFor(model => model.Position)
         </dd>
-        <dt class = "col-sm-10">
+        <dt class = "card-title">
             @Html.DisplayNameFor(model => model.JerseyNumber)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "card-subtitle">
             @Html.DisplayFor(model => model.JerseyNumber)
         </dd>
        
-        <dd class = "col-sm-10">
+        <dd>
            <img src = "@Url.Content(Model.Club.CrestUrl)" width="60" height="60"  >
         </dd>
     </dl>
