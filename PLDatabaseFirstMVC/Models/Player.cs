@@ -13,10 +13,12 @@ namespace PLDatabaseFirstMVC.Models
         [Display(Name = "Country")]
         public string Nationality { get; set; } = null!;
         public string Position { get; set; } = null!;
-        [Range(1,100)]
+        [Range(1,100,ErrorMessage = "Kit numbers should be between 1 and 100")]
         [Display(Name ="Kit Number")]
         public byte JerseyNumber { get; set; }
+        [Display(Name ="Photo")]
         public string PlayerImage { get; set; } = null!;
+        [Display(Name="Club")]
         public Guid ClubId { get; set; }
 
         public virtual Club? Club { get; set; }

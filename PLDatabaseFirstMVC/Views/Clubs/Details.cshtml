@@ -18,6 +18,7 @@
     <dd class = "card-subtitle">@Html.DisplayFor(model => model.City)</dd>
     <dt class = "card-title">@Html.DisplayNameFor(model => model.Manager)</dt>
     <dd class = "card-subtitle">@Html.DisplayFor(model => model.Manager)</dd>
+
     </dl>
   </div>
 
@@ -26,5 +27,6 @@
 
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.ClubId" class="btn btn-primary">Edit</a> |
-    <a asp-action="Index" class="btn btn-dark">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a> |
+    <a asp-action="" class="btn btn-primary">View Roster</a>
 </div>
